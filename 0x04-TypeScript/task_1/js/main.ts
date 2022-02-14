@@ -10,3 +10,11 @@ interface Teacher {
 interface Directors extends Teacher {
   numberOfReports: number;
 }
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+const printTeacher: printTeacherFunction = (
+  firstName: string,
+  lastName: string
+) => `${firstName.substring(0, 1)}. ${lastName}`;
