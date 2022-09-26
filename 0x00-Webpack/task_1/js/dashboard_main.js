@@ -1,3 +1,4 @@
+// does this need a comment?
 import $ from 'jquery';
 const _ = require('lodash');
 
@@ -9,13 +10,13 @@ $('body').append('<p>Copyright - Holberton School</p>');
 
 $('button').on(
   'click',
-  _.debounce(updatedCounter, 500, {
+  _.debounce(updateCounter, 500, {
     leading: true,
   })
 );
 
 let count = 0;
-function updatedCounter() {
+function updateCounter() {
   count += 1;
   $('#count').text(`${count} clicks on the button`);
 }
