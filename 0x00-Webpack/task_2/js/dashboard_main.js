@@ -1,3 +1,4 @@
+// commenting maybe?
 import $ from 'jquery';
 const _ = require('lodash');
 import '../css/main.css';
