@@ -1,0 +1,26 @@
+#Notif {
+	display: flex;
+	flex-direction: column;
+	float: right;
+	margin-right: 1rem;
+}
+
+.menuItem {
+	align-self: flex-end;
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+}
+
+.Notifications {
+	border: 1px red dashed;
+	padding: 1rem;
+	padding-right: 10rem;
+}
+
+li[data-priority="default"] {
+	color: blue;
+}
+
+li[data-priority="urgent"] {
+	color: red;
+}
