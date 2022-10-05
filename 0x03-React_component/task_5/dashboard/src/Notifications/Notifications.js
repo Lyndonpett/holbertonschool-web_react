@@ -12,12 +12,18 @@ class Notifications extends Component {
     this.markAsRead = this.markAsRead.bind(this);
   }
 
+  shouldComponentUpdate(nextProps) {
+    const { listNotifications } = this.props;
+    return nextProps.listNotifications.length > listNotifications.length;
+  }
+
   markAsRead(id) {
     console.log(`Notification ${id} has been marked as read`);
   }
 
   render() {
     const { displayDrawer, listNotifications } = this.props;
+
     return (
       <div id="Notif">
         <div className="menuItem">Your Notifications</div>
@@ -32,7 +38,7 @@ class Notifications extends Component {
               listNotifications.map((notif) => (
                 <NotificationItem
                   key={notif.id}
-                  type={notif.type}
+                  type={notif.type ? notif.type : 'default'}
                   value={notif.value}
                   html={notif.html}
                   markAsRead={() => this.markAsRead(notif.id)}
