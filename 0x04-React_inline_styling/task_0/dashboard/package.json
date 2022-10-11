@@ -29,6 +29,7 @@
 		"webpack-dev-server": "^4.7.4"
 	},
 	"dependencies": {
+		"aphrodite": "^2.4.0",
 		"enzyme-adapter-react-16": "^1.15.6",
 		"prop-types": "^15.8.1",
 		"react": "^17.0.2",
