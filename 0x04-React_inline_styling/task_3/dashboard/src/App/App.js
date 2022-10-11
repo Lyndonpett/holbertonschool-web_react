@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
   mainContent: {
     borderTop: '3px #e0354b solid',
     paddingLeft: '4rem',
+    '@media (min-width: 900px)': {
+      paddingLeft: '0',
+    },
   },
   footer: {
     borderTop: '3px #e0354b solid',

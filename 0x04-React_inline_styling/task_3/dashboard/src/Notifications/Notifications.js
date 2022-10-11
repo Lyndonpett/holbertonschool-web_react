@@ -10,28 +10,37 @@ const styles = StyleSheet.create({
   Notif: {
     display: 'flex',
     flexDirection: 'column',
-    float: 'right',
-    marginRight: '1rem',
+    fontSize: 20,
+    '@media (min-width: 900px)': {
+      marginRight: '1rem',
+      float: 'right',
+    },
   },
   menuItem: {
-    alignSelf: 'flex-end',
     marginBottom: '1rem',
+    zIndex: '1',
+    '@media (min-width: 900px)': {
+      textAlign: 'right',
+    },
   },
-  notifs: {
-    border: '1px red dashed',
-    padding: '1rem 10rem 2rem 2rem',
+  notifList: {
+    listStyle: 'none',
+    fontSize: 20,
+    zIndex: '1',
+    '@media (min-width: 900px)': {
+      border: '1px red dashed',
+      padding: '1rem 7rem 2rem 2rem',
+    },
   },
   closeBtn: {
     border: 0,
-    background: 'transparent',
     position: 'absolute',
-    right: 50,
-    top: 60,
-  },
-  closeImg: {
-    border: 0,
-    height: 15,
-    width: 15,
+    right: 20,
+    top: 20,
+    '@media (min-width: 900px)': {
+      right: 45,
+      top: 65,
+    },
   },
 });
 
@@ -57,7 +66,7 @@ class Notifications extends Component {
       <div className={css(styles.Notif)}>
         <div className={css(styles.menuItem)}>Your Notifications</div>
         {displayDrawer && (
-          <div className={css(styles.notifs)}>
+          <div className={css(styles.notifList)}>
             {listNotifications.length ? (
               <p>Here is the list of notifications</p>
             ) : (
@@ -83,8 +92,10 @@ class Notifications extends Component {
             >
               <img
                 src={closeIcon}
-                className={css(styles.closeImg)}
-                alt="close icon"
+                alt="Close"
+                width="15px"
+                height="15px"
+                border="0"
               />
             </button>
           </div>
