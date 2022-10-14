@@ -19,11 +19,21 @@ const styles = StyleSheet.create({
     },
   },
   notificationsDiv: {
+	'@media (max-width: 900px)': {
     width: '100%',
     border: '2px dashed #e11d3f',
     display: 'flex',
+	float: 'none',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    },
+    width: '30%',
+    border: '2px dashed #e11d3f',
+    display: 'flex',
+	float: 'right',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+
   },
   notifications: {
     padding: '15px',
