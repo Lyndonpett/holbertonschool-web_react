@@ -6,12 +6,10 @@ export default function printBestStudents(grade) {
     if (grade[student].score >= 70) {
       students[student] = {
         firstName:
-          grade[student].firstName.charAt(0).toUpperCase()
-		  +
+          grade[student].firstName.charAt(0).toUpperCase() +
           grade[student].firstName.slice(1),
         lastName:
-          grade[student].lastName.charAt(0).toUpperCase()
-		  +
+          grade[student].lastName.charAt(0).toUpperCase() +
           grade[student].lastName.slice(1),
         score: grade[student].score,
       };
