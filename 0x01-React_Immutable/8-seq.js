@@ -3,7 +3,7 @@ import { Seq } from 'immutable';
 export default function printBestStudents(grades) {
   const bestStudents = Seq(grades)
     .filter((grade) => grade.score >= 70)
-    .map((grade) => {
+    .map(grade => {
       return {
         score: grade.score,
         firstName:
