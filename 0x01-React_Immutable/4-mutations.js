@@ -9,7 +9,7 @@ export const map = Map({
   6: 'Lucas',
 });
 
-// Export a second constant named map2. It should use the first map and modify the following values:
+// Export a second constant named map2. It should use the first map
 // Modify the value for the index 2, to Benjamin
 // Modify the value for the index 4, to Oliver
 
