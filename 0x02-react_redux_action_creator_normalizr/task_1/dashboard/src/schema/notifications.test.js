@@ -1,5 +1,4 @@
-import getAllNotificationsByUser from './notifications';
-const expect = chai.expect;
+import { getAllNotificationsByUser, normalized } from './notifications';
 
 describe('getAllNotificationsByUser', () => {
   it('returns the correct number of notifications', () => {
@@ -41,7 +40,7 @@ describe('getAllNotificationsByUser', () => {
       '5debd76468cb5b277fd125f4',
       '5debd764de9fa684468cdc0b',
     ];
-    const actual = result.result;
+    const actual = normalized.result;
     expect(actual).toEqual(expected);
   });
 
@@ -56,7 +55,7 @@ describe('getAllNotificationsByUser', () => {
         name: { first: 'Poole', last: 'Sanders' },
         picture: 'http://placehold.it/32x32',
       };
-      const actual = result.entities.users['5debd764a7c57c7839d722e9'];
+      const actual = normalized.entities.users['5debd764a7c57c7839d722e9'];
       expect(actual).toEqual(expected);
     }
   );
@@ -72,7 +71,7 @@ describe('getAllNotificationsByUser', () => {
         value: 'Cursus risus at ultrices mi.',
       };
       const actual =
-        result.entities.messages['efb6c485-00f7-4fdf-97cc-5e12d14d6c41'];
+        normalized.entities.messages['efb6c485-00f7-4fdf-97cc-5e12d14d6c41'];
       expect(actual).toEqual(expected);
     }
   );
@@ -86,7 +85,8 @@ describe('getAllNotificationsByUser', () => {
         context: '3068c575-d619-40af-bf12-dece1ee18dd3',
         id: '5debd7642e815cd350407777',
       };
-      const actual = result.entities.notifications['5debd7642e815cd350407777'];
+      const actual =
+        normalized.entities.notifications['5debd7642e815cd350407777'];
       expect(actual).toEqual(expected);
     }
   );
