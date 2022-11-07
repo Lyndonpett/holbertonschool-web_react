@@ -14,7 +14,7 @@ describe('mapStateToProps returns', () => {
     StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
   });
 
-  const defaultState = Map({
+  const state = Map({
     isNotificationDrawerVisible: false,
     isUserLoggedIn: false,
     user: {
@@ -24,7 +24,7 @@ describe('mapStateToProps returns', () => {
     },
   });
 
-  const rtnProps = {
+  const returnProps = {
     isLoggedIn: false,
     isNotificationDrawerVisible: false,
     user: {
@@ -35,6 +35,6 @@ describe('mapStateToProps returns', () => {
   };
 
   it('expected object from state', () => {
-    expect(mapStateToProps({ ui: defaultState })).toEqual(rtnProps);
+    expect(mapStateToProps({ ui: state })).toEqual(returnProps);
   });
 });
